@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <com.kingPadStudy.views.MenuView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent">
+   <ImageView 
+        android:id="@+id/button_home"
+        android:layout_width="50dip"
+        android:layout_height="50dip" 
+        android:layout_marginTop="36dip"
+        android:layout_marginLeft="110dip"
+        android:src="@drawable/button_home" ></ImageView>
+   
+  
+   <!-- <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="68dip"
+        android:layout_height="68dip" 
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/logo" /> -->
+   <com.kingPadStudy.views.HorizontialListView
+        android:layout_width="800dip"
+        android:layout_height="50dip"
+        android:layout_marginTop="45dip"
+        android:layout_marginLeft="185dip"
+        android:id="@+id/listview_path" >
+   </com.kingPadStudy.views.HorizontialListView>
+       
+    <ListView 
+        android:layout_width="222dip"
+        android:layout_height="400dip"
+        android:layout_weight="1"
+        android:id="@+id/listview_leftMenu"
+        android:fadingEdge="none"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@+id/listview_path"
+        android:divider="@android:color/transparent"
+        android:cacheColorHint="#00000000"  />
+    <ListView 
+        android:layout_width="700dip"
+        android:layout_height="400dip"
+        android:layout_weight="1"
+        android:layout_toRightOf="@+id/listview_leftMenu"
+        android:id="@+id/listview_centerMenu"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="29dip"
+        android:layout_below="@+id/listview_path"
+        android:divider="@android:color/transparent"
+        android:fadingEdge="none" 
+        android:cacheColorHint="#00000000" />
+   </com.kingPadStudy.views.MenuView> 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/control_part"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" >
+  
+   <!-- <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="68dip"
+        android:layout_height="68dip" 
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/logo" /> -->
+        <!-- 右上角的返回键 -->
+        <com.views.GameView
+            android:id="@+id/button_back"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip" />
+        <WebView
+            android:id="@+id/webview_prepare"
+            android:layout_width="693dip"
+            android:layout_height= "468dip"
+            android:layout_marginLeft="160dip" 
+            android:layout_marginTop="127dip"
+            android:background="@drawable/tt" />
+    </RelativeLayout>
+
+</RelativeLayout>

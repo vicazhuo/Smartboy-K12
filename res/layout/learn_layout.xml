@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/control_part"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" >
+   
+   <!-- <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="68dip"
+        android:layout_height="68dip" 
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/logo" /> -->
+        <!-- 左下角的记分栏 -->
+        <include
+            android:layout_width="200dp"
+            android:layout_height="300dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            layout="@layout/record_grades_layout" />
+        <!-- 右上角的返回键 -->
+        <com.views.GameView
+            android:id="@+id/button_back"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip" />
+        <!-- 中间部分主体操作区域 -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="120dip"
+            android:layout_marginLeft="180dip"
+            android:layout_marginRight="160dip"
+            android:layout_marginTop="140dip" >
+            <!-- 标题介绍 -->
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="10dip"
+                android:textColor="#FF0000"
+                android:textSize="30dip" />
+            <!-- 播放声音的喇叭 -->
+            <ImageView
+                android:id="@+id/imageview_play_music"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/intro"
+                android:layout_marginTop="10dip"
+                android:src="@drawable/horn" />
+            <!-- 学习文字显示的主要提示内容 -->
+            <TextView
+                android:id="@+id/text_study"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/intro"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:textColor="@android:color/black"
+                android:textSize="60dip" />
+            <!-- 学习图片显示主要提示内容 -->
+
+            <ImageView
+                android:id="@+id/img_study"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/intro"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip" />
+            <!-- 核对答案 -->
+
+            <com.views.GameView
+                android:id="@+id/imageview_check_answer"
+                android:layout_width="220dip"
+                android:layout_height="80dip"
+                android:layout_below="@+id/text_study"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dip" />
+            <!-- 答案显示区域 -->
+
+            <TextView
+                android:id="@+id/study_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_study"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dip"
+                android:textColor="#ff0000"
+                android:textSize="60dip" />
+            <!-- 三个标记了解程度的小人 -->
+
+            <LinearLayout
+                android:id="@+id/check_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dip"
+                android:orientation="horizontal" >
+
+                <com.views.GameView
+                    android:id="@+id/check_bad"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginRight="20dip" />
+
+                <com.views.GameView
+                    android:id="@+id/check_just"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginRight="20dip" />
+
+                <com.views.GameView
+                    android:id="@+id/check_good"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip" />
+            </LinearLayout>
+
+            <!-- 红、蓝、黄灯 -->
+
+            <com.views.GameView
+                android:id="@+id/light"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dip" />
+
+            <!-- 上下题的按钮 -->
+
+            <LinearLayout
+                android:id="@+id/jump_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dip"
+                android:orientation="horizontal" >
+
+                <com.views.GameView
+                    android:id="@+id/button_last"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginRight="20dip" />
+
+                <com.views.GameView
+                    android:id="@+id/button_next"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hint_layout"
+            android:layout_width="350dip"
+            android:layout_height="500dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="340dip"
+            android:background="@drawable/frame_hint"
+            android:gravity="bottom|center" >
+
+            <TextView
+                android:id="@+id/text_hint"
+                android:layout_width="262dip"
+                android:layout_height="66dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="107dip"
+                android:layout_marginLeft="12dip"
+                android:textColor="#000000"
+                android:textSize="18sp" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/button_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="7dip"
+                android:layout_marginLeft="104dip"
+                android:src="@drawable/sure" >
+            </ImageView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

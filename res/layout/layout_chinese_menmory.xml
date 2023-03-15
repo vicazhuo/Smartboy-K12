@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kingPadStudy.views.Chinese_Menmory_View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/bg_flash_screen"> 
+    <RelativeLayout
+        android:id="@+id/bg_object_small"
+        android:layout_width="1024dip"
+        android:layout_height="768dip"
+        android:layout_centerVertical="true">  
+  
+   <!-- <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="68dip"
+        android:layout_height="68dip" 
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/logo" /> -->
+		 <com.views.GameView
+            android:id="@+id/button_back"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/> 
+		<!-- 引导字 -->
+		<TextView
+            android:id="@+id/text_yindao"
+                android:layout_width="680dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="190dip"
+                android:layout_marginTop="160dip"
+                android:textColor="#990000"
+                android:textSize="25sp" >
+		</TextView> 	
+		<LinearLayout
+            android:layout_width="400dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="320dip"
+            android:layout_marginTop="300dip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"  > 
+			<TextView
+	            android:id="@+id/text_dazi"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@android:color/black">
+			</TextView> 	
+			<TextView
+	            android:id="@+id/text_dazi2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@android:color/black">
+			</TextView> 	
+		 </LinearLayout>
+            <!-- 上下题的按钮 -->
+            <LinearLayout
+                android:id="@+id/jump_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="170dip"
+                android:layout_marginBottom="125dip"
+                android:orientation="horizontal"
+            	android:visibility="invisible"  >
+                <com.views.GameView
+                    android:id="@+id/button_last"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+			        android:background="@drawable/button_previous"
+                    android:layout_marginRight="20dip" />
+                <com.views.GameView
+                    android:id="@+id/button_next"
+                    android:layout_width="60dip"
+			        android:background="@drawable/button_next"
+                    android:layout_height="60dip" />
+            </LinearLayout>
+    </RelativeLayout>
+</com.kingPadStudy.views.Chinese_Menmory_View>

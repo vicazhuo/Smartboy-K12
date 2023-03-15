@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kingPadStudy.views.WordsDiscriminateView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 字词辨析 -->
+    <RelativeLayout
+        android:id="@+id/control_part"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" >
+
+        <!-- 左下角的记分栏 -->
+
+        <include
+            android:layout_width="200dp"
+            android:layout_height="300dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            layout="@layout/record_grades_layout" />
+        <!-- 右上角的返回键 -->
+ 
+        <com.views.GameView
+            android:id="@+id/button_back"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip" />
+
+        <!-- 中间部分主体操作区域 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="120dip"
+            android:layout_marginLeft="180dip"
+            android:layout_marginRight="160dip"
+            android:layout_marginTop="140dip" >
+
+            <!-- 标题 -->
+
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="10dip"
+                android:textColor="#FF0000"
+                android:textSize="30dip" />
+            <!-- 播放声音的喇叭 -->
+
+            <ImageView
+                android:id="@+id/imageview_play_music"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/intro"
+                android:layout_marginTop="10dip"
+                android:src="@drawable/horn" />
+            <!-- 学习显示的主要提示内容，字体大小可以调节 -->
+
+            <LinearLayout
+                android:id="@+id/study_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/intro"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/study"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="60dip" />
+
+                <TextView
+                    android:id="@+id/study1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="60dip" />
+
+                <TextView
+                    android:id="@+id/study2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="60dip" />
+            </LinearLayout>
+
+            <!-- 答案选择区域 -->
+
+            <LinearLayout
+                android:id="@+id/choose_part"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/study_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textview_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/textview_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dip"
+                    android:gravity="top"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/textview_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dip"
+                    android:gravity="top"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+            <!-- 对，错的图片 -->
+
+            <ImageView
+                android:id="@+id/imageview_check_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/study_layout"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="30dip" />
+            <!-- 正确答案 -->
+
+            <TextView
+                android:id="@+id/textview_right_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/choose_part"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dip"
+                android:textColor="#ff0000"
+                android:textSize="20dip" />
+            <!-- 答案解析，分两部分 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_right_answer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <!-- 第一个字 -->
+
+                <TextView
+                    android:id="@+id/textview_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/textview_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <!-- 三个标记了解程度的小人 -->
+
+            <LinearLayout
+                android:id="@+id/check_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dip"
+                android:orientation="horizontal" >
+
+                <com.views.GameView
+                    android:id="@+id/check_bad"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginRight="20dip" />
+
+                <com.views.GameView
+                    android:id="@+id/check_just"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginRight="20dip" />
+
+                <com.views.GameView
+                    android:id="@+id/check_good"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip" />
+            </LinearLayout>
+
+            <com.views.GameView
+                android:id="@+id/light"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dip" />
+
+            <!-- 上下题的按钮 -->
+
+            <LinearLayout
+                android:id="@+id/jump_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dip"
+                android:orientation="horizontal" >
+
+                <com.views.GameView
+                    android:id="@+id/button_last"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginRight="20dip" />
+
+                <com.views.GameView
+                    android:id="@+id/button_next"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.kingPadStudy.views.WordsDiscriminateView>

@@ -1,0 +1,66 @@
+1、com.bean包
+	1、baseBean.java，在indexData中文件配置目录
+		包含字段为： type, title, path, mode, intro, icon。该字段为为null或者""表示该字段没有值 
+		
+	2、CatalogBean.java,在indexData中使用
+		该类从baseBean派生。
+		
+		使用方法
+		type_msg == Constant.CATALOG,通过catalogList获取数据。
+		type_msg == Constant.SECTION,通过sectionList获取数据。
+	3,CommonModeBean.java 解析data.xml文件bean
+		字段为fileName,文件名，type，该文件类型
+	
+	4, LearnBean.java 解析data.xml mode = "study"时需要
+		字段为:颜色，字体，字体大小，该节点文本，文件路径，没有则为null
+	
+	5， LearnModeBean.java 解析data.xml文件bean
+		字段为：答案，选择（ArrayList<LearnBean>）, 问题
+		
+2、com.data包
+	1、BaseData.java 加载数据的基类
+	
+	2、CatalogData.java 加载index.xml文件数据
+	请求方式Constant.CATALOG_DATA
+	请求参数：
+		[1]<path>:文件夹路径 egg："/mnt/sdcard/一级"
+	返回数据
+		[1]返回CatalogBean的递归树，每一次获取下一个数据时都必须判断type_msg,更具type_msg类型判断到底该用哪个数据
+			使用方法
+			type_msg == Constant.CATALOG,通过catalogList获取数据。
+			type_msg == Constant.SECTION,通过sectionList获取数据。
+			
+	3，MetaData.java 解析data.xml文件数据
+	请求方式Constant.META_DATA
+	请求参数：
+		[1]<path>:该文件夹路径（最后没有"/"），必填
+		[2]<type>: 文件类型在CatalogData中返回，必填
+		[3]<mode>:操作模式，在CatalogData中返回，mode = "study" 或者 null
+	返回数据：
+		[1]标题,getTitle()返回。
+		[2]背景，getBg()返回。
+		
+		// --- mode == null 时
+		[3]ArrayList<ArrayList<CommonModeBean>>数组，第一个ArrayList中的大小表示有多少个item，
+			该字段在普通模式中返回null，也就是当mode == null时。
+			第二个表示该item中有多个数据类型，比如在显示古诗的时候同时播放音乐。getList()方法获取
+			
+		// ---	mode == "study"
+		[4]介绍说明，getIntro()返回，改字段在mode == "study"时有值，否则null。
+		[5]item列表,getLearnList()返回,类型为LearnModeBean, mode == "study"，时有值，否则null
+		
+	4, PoemData.java 获取诗词xml文件数据
+	请求方式Constant.POEM_DATA
+	请求参数：
+		[1]<path>:该诗词完整路径，包括(后缀.xml);
+	返回数据：
+		[1]标题，getTitle()返回。
+		[2]作者，getAuthor()返回。
+		[3]该诗词内容,getContentList()返回。
+		
+		
+3、com.utils包
+	1、LoadData.java加载数据接口类
+	
+	2、RequestListener.java 加载数据完成后的回调接口。
+		注意：在onError函数中返回的是错误消息

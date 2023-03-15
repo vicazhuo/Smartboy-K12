@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginRight="6dip"
+    android:minHeight="40dip"
+    android:background="@drawable/middle_selector">
+    
+    <!-- 充费记录item -->
+    
+    <!-- 第一列数据 -->
+    <TableRow 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+        <!-- 消费时间 -->
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="3dip">
+            <TextView 
+                android:id="@+id/pay_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical|right"
+                android:textSize="25dp"
+                android:text="消费时间："/>
+            <TextView 
+                android:id="@+id/textview_pay_date"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/pay_date"
+                android:textColor="@android:color/black"
+                android:singleLine="true"
+                android:textSize="24dp"/>
+        </RelativeLayout>
+      
+        <!-- 消费金额 -->
+         <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView 
+                android:id="@+id/pay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:textSize="25dp" 
+                android:text="消费金额："/>
+            <TextView 
+                android:id="@+id/textview_pay_money"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:singleLine="true"
+                android:textSize="24dp"
+                android:layout_toRightOf="@id/pay_money"
+                android:textColor="@android:color/black"/>
+        </RelativeLayout>
+        
+    </TableRow>
+    
+    <!-- 第二行数据 -->
+    <TableRow 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           	android:layout_marginTop="5dp">
+            <TextView 
+                android:id="@+id/pay_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical|right"
+                android:textSize="25dp"
+                android:text="经 手 人 ："/>
+            <TextView 
+                android:id="@+id/textview_pay_user"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/pay_user"
+                android:textColor="@android:color/black"
+                android:singleLine="true"
+                android:textSize="25dp"/>
+        </RelativeLayout>
+      
+         <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="3dip">
+            <TextView 
+                android:id="@+id/pay_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="@android:color/black"
+                android:text="消费方式："/>
+            <TextView 
+                android:id="@+id/textview_pay_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:singleLine="true"
+                android:textSize="25dp"
+                android:layout_toRightOf="@id/pay_type"
+                android:textColor="@android:color/black"/>
+        </RelativeLayout>
+        
+    </TableRow>
+    
+</TableLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/control_part"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" >
+
+        <!-- 右上角的返回键 -->
+
+        <com.views.GameView
+            android:id="@+id/button_back"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip" />
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="10dip"
+            android:textColor="#FF0000"
+            android:textSize="30dip" />
+        <!-- 学习显示的主要提示内容 -->
+
+        <TextView
+            android:id="@+id/study"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:textSize="60dip" />
+
+        <TextView
+            android:id="@+id/study_mean"
+            android:layout_width="220dip"
+            android:layout_height="80dip"
+            android:layout_below="@id/study"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip" />
+    </RelativeLayout>
+
+</LinearLayout>

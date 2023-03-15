@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+    <!-- 选择教材xml布局文件 -->
+	<TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5dip"
+		android:layout_marginRight="5dip"
+		android:layout_marginTop="5dip"
+		android:background="@android:color/transparent"
+		android:shrinkColumns="0"
+		android:stretchColumns="0" >
+	    <TableRow
+           android:layout_width="fill_parent"
+           android:layout_height="60dip"
+           android:background="@android:color/darker_gray" >
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" 
+               android:text="游戏列表"
+               android:textColor="@android:color/white"
+               android:textSize="25dip" />
+         </TableRow>
+	     <TableRow
+             android:layout_width="fill_parent"
+             android:layout_height="60dip"
+             android:background="@drawable/bottom_selector" >
+ 			<ListView 
+		        android:layout_width="560dip"
+		        android:layout_height="615dip"
+		        android:layout_weight="1"
+		        android:background="@drawable/ic_more_item_bottom_pressed"
+		        android:id="@+id/listview"
+		        android:fadingEdge="none" 
+		        android:divider="@android:color/transparent"
+		        android:cacheColorHint="#00000000"
+		        android:listSelector="@drawable/selector"  />
+         </TableRow>
+    </TableLayout> 
+
+</LinearLayout>

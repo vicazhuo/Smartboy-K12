@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript">
+
+	var total;		 	//定义flash影片总桢数
+	var frame_number;	//定义flash影片当前桢数
+	/* var rate = 12;		//帧频 */
+
+	//动态显示播放影片的当前桢/总桢数(进度条显示)
+	function showcount(){
+		total = movie.TotalFrames();
+		frame_number = movie.CurrentFrame();
+		frame_number++;
+		var progressSize = 500*(frame_number/total);
+		CallJava.consoleFlashProgress(progressSize);
+	}
+	
+	//播放影片 
+	function Play(){
+		movie.Play();
+		showcount();
+	}
+
+	//暂停播放
+	function Pause() {
+		movie.StopPlay();
+	}
+
+	//开始载入flash影片
+	function loadSWF(fsrc, fwidth, fheight) {
+		movie.LoadMovie(0, fsrc);
+		movie.width = Math.abs(fwidth);
+		movie.height = Math.abs(fheight);
+		frame_number = movie.CurrentFrame();
+	}
+
+
+	//flash插件不存在
+	function error() {
+		document.body.style.backgroundImage = "url(flash_view_back_7490.jpg)";
+		document.getElementById("flash_page").innerHTML = "<div style='color:#F00;" +
+				" font-size:20px; text-align:center; margin-top:50px; margin-left:50px;'>"
+				+ "缺少支持flash播放的插件，请安装后再试！</div>";
+		/* CallJava.goToMarket(); */
+	}
+	
+	function replace(){
+		var widget = document.getElementById("widget");
+		alert("left=" + widget.getBoundingClientRect().left
+				+ ";right=" + widget.getBoundingClientRect().right);
+	}
+	
+</script>
+
+<style type="text/css">
+	
+	body {
+		background:#E8C77A;
+		margin:0;
+		padding:0;
+	}
+	
+</style> 
+
+</head>
+
+
+<body>
+	<div id="widget" style="margin:0; padding:0;" id="flash_page" align="center">
+		<object type="application/x-shockwave-flash"
+                        id='movie'
+                        align="left"
+                        data=""
+                        Wmode="transparent"
+                        height=""
+                        width="">
+                                <param name="movie" value="" />
+                                <param name="quality" value="high" />
+                                <param name="Wmode" value="transparent" />
+                                <param name="bgColor" value="transparent" />
+                                <param name="allowScriptAccess" value="always" />
+                                <param name="menu" value="false" />
+                                <param name="scale" value="" />
+                                <param name="allowFullScreen" value="false" />
+       </object>
+		
+	</div>
+</body>
+
+
+</html>
+ 

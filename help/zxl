@@ -1,0 +1,12 @@
+1:播放flash：
+	使用的所有接口在FlashTestActivity类中，这个是flash播放的测试类。
+	
+2:使用录音
+	接口在com.utils.AudioRecord类中,该类使用单例模式创建，用AudioRecord.getInstance()方法获取实例；
+	1):开始录音：startRecording()
+	2）：结束录音：stopRecording()，在调用开始录音方法之后需要结束时调用该方法
+	3）：播放刚才的录音：startPlaying()
+	4）：停止播放刚才的录音：stopPlaying()
+	5）：删除当前的录音文件deleteCurrentRecordFile()，录音的时候会在sd卡上自动创建一个临时文件来保存录音，如果用户
+	不保存录音，则需要调用该方法删除临时文件，如果不调用该方法则表示用户保存了这个录音文件
+	6）：释放录音：release()，在退出录音界面之后调用

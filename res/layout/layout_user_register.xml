@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg21"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/top" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="用户注册"
+            android:textColor="@android:color/white"
+            android:textSize="30dip" />
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="100dip"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/button2"
+            android:gravity="center"
+            android:text="返  回"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_marginTop="50dp">
+	    <TableLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@android:color/transparent"
+	        android:shrinkColumns="10"
+	        android:stretchColumns="0"
+	        android:gravity="center" 
+	        android:layout_marginLeft="220dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginRight="220dp">
+	        <TableRow
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/userpawd_selector" >
+	            <RelativeLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content" >
+	                <TextView
+	                    android:id="@+id/web_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentTop="true"
+	                    android:layout_marginLeft="20dip"
+	                    android:layout_marginTop="10dp"
+	                    android:text="客户姓名    "
+	                    android:textColor="#5A5A5A"
+	                    android:inputType="textPersonName"
+	                    android:textSize="24dip" />
+	                <EditText
+	                    android:id="@+id/name"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="6dip"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_marginTop="10dip"
+	                    android:layout_toRightOf="@id/web_text"
+	                    android:paddingBottom="8dip" 
+	                     
+	                    android:focusable="true"  
+	                    android:singleLine="true"
+	                    android:textColor="#5A5A5A"
+	                    android:textSize="24dip" 
+	                    android:layout_marginBottom="2dp"/>
+	            </RelativeLayout>
+	        </TableRow>
+	        <TableRow
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/userpawd_selector" >
+	            <RelativeLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content" >
+	                <TextView
+	                    android:id="@+id/web_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentTop="true"
+	                    android:layout_marginLeft="20dip"
+	                    android:layout_marginTop="10dp"
+	                    android:text="身份证号    "
+	                    android:textColor="#5A5A5A"
+	                    android:textSize="24dip" />
+	                <EditText
+	                    android:id="@+id/id_number"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="6dip"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_marginTop="10dip"
+	                    android:layout_toRightOf="@id/web_text"
+	                    android:paddingBottom="8dip" 
+	                     
+	                    android:focusable="true"  
+	                    android:singleLine="true"
+	                    android:textColor="#5A5A5A"
+	                    android:inputType="number"
+	                    android:textSize="24dip" 
+	                    android:layout_marginBottom="2dp"/>
+	            </RelativeLayout>
+	        </TableRow>
+	        <TableRow
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/userpawd_selector" >
+	            <RelativeLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content" >
+	                <TextView
+	                    android:id="@+id/web_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentTop="true"
+	                    android:layout_marginLeft="20dip"
+	                    android:layout_marginTop="10dp"
+	                    android:text="联系电话    "
+	                    android:textColor="#5A5A5A"
+	                    android:textSize="24dip" />
+	                <EditText
+	                    android:id="@+id/phone_number"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="6dip"
+	                    android:layout_marginRight="10dip"
+	                    android:inputType="number"
+	                    android:layout_marginTop="10dip"
+	                    android:layout_toRightOf="@id/web_text"
+	                    android:paddingBottom="8dip" 
+	                     
+	                    android:focusable="true"  
+	                    android:singleLine="true"
+	                    android:textColor="#5A5A5A"
+	                    android:textSize="24dip" 
+	                    android:layout_marginBottom="2dp"/>
+	            </RelativeLayout>
+	        </TableRow>
+	        <TableRow
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/userpawd_selector" >
+	            <RelativeLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content" >
+	                <TextView
+	                    android:id="@+id/web_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentTop="true"
+	                    android:layout_marginLeft="20dip"
+	                    android:layout_marginTop="10dp"
+	                    android:text="电子信箱    "
+	                    android:textColor="#5A5A5A"
+	                    android:textSize="24dip" />
+	                <EditText
+	                    android:id="@+id/email"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="6dip"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_marginTop="10dip"
+	                    android:layout_toRightOf="@id/web_text"
+	                    android:paddingBottom="8dip" 
+	                     
+	                    android:focusable="true"  
+	                    android:singleLine="true"
+	                    android:textColor="#5A5A5A"
+	                    android:inputType="textEmailAddress" 
+	                    android:textSize="24dip" 
+	                    android:layout_marginBottom="2dp"/>
+	            </RelativeLayout>
+	        </TableRow>
+	        <TableRow
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/userpawd_selector" >
+	            <RelativeLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content" >
+	                <TextView
+	                    android:id="@+id/web_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentTop="true"
+	                    android:layout_marginLeft="20dip"
+	                    android:layout_marginTop="10dp"
+	                    android:text="家庭住址    "
+	                    android:textColor="#5A5A5A"
+	                    android:textSize="24dip" />
+	                <EditText
+	                    android:id="@+id/address"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="6dip"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_marginTop="10dip"
+	                    android:layout_toRightOf="@id/web_text"
+	                    android:inputType="textPostalAddress"
+	                    android:paddingBottom="8dip" 
+	                    android:focusable="true"  
+	                    android:singleLine="true"
+	                    android:textColor="#5A5A5A"
+	                    android:textSize="24dip" 
+	                    android:layout_marginBottom="2dp"/>
+	            </RelativeLayout>
+	        </TableRow>
+	    </TableLayout>
+     </ScrollView>
+     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dip" 
+        android:layout_marginLeft="710dip" 
+        android:gravity="center">
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="100dip"
+            android:layout_height="50dip" 
+            android:background="@drawable/button1"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="注  册" 
+            android:textColor="@android:color/white"
+            android:textSize="25dip" /> 
+ 	 </RelativeLayout>
+</RelativeLayout>

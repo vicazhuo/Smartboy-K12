@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kingPadStudy.views.PoemReciteView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg_flash_screen"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/flash_bg"
+        android:layout_width="1024dip"
+        android:layout_height="768dip"
+        android:layout_centerVertical="true" >
+
+  
+   <!-- <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="68dip"
+        android:layout_height="68dip" 
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/logo" /> -->
+        <com.views.GameView
+            android:id="@+id/button_back"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="700dip"
+            android:layout_height="400dip"
+            android:layout_marginLeft="170dip"
+            android:layout_marginTop="100dip" >
+
+            <LinearLayout
+                android:id="@+id/linear_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dip"
+                    android:gravity="center"
+                    android:text="古诗标题"
+                    android:textColor="@android:color/black"
+                    android:textSize="45sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:text="古诗作者曹植"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" >
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <!-- 三个标记了解程度的小人 -->
+
+        <LinearLayout
+            android:id="@+id/check_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="125dip"
+            android:layout_marginLeft="180dip"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <com.views.GameView
+                android:id="@+id/check_bad"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/button_bad" />
+
+            <com.views.GameView
+                android:id="@+id/check_just"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/button_just" />
+
+            <com.views.GameView
+                android:id="@+id/check_good"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:background="@drawable/face_good" />
+        </LinearLayout>
+
+        <!-- 灯 -->
+
+        <com.views.GameView
+            android:id="@+id/light"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="135dip"
+            android:layout_marginLeft="190dip"
+            android:visibility="invisible" />
+
+        <!-- 上下题的按钮 -->
+
+        <LinearLayout
+            android:id="@+id/jump_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="125dip"
+            android:layout_marginRight="170dip"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <com.views.GameView
+                android:id="@+id/button_last"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/button_previous" />
+
+            <com.views.GameView
+                android:id="@+id/button_next"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:background="@drawable/button_next" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_button_switch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="34dip"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/button_gendu"
+                android:layout_width="150dip"
+                android:layout_height="40dip"
+                android:background="@drawable/button_gendu" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/button_danju"
+                android:layout_width="150dip"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/button_dandu" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/button_shuangju"
+                android:layout_width="150dip"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/button_shuangdu" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/button_quanwen"
+                android:layout_width="150dip"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/button_quanwen" >
+            </ImageButton>
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.kingPadStudy.views.PoemReciteView>

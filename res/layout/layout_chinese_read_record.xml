@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/bg_flash_screen" > 
+    <RelativeLayout
+        android:id="@+id/flash_bg"
+        android:layout_width="1024dip"
+        android:layout_height="768dip"
+        android:layout_centerVertical="true"> 
+   
+   <!-- <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="68dip"
+        android:layout_height="68dip" 
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/logo" /> -->
+        <ScrollView  
+	        android:id="@+id/sv" 
+	        android:layout_width="700dip"
+	        android:layout_height="400dip"
+		    android:layout_marginTop="78dip"
+		    android:layout_marginLeft="170dip"  > 
+		        <LinearLayout
+		        android:id="@+id/linear_text" 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+			        android:gravity="center"
+			        android:layout_gravity="center_horizontal">
+		        <TextView 
+		            android:id="@+id/title" 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"  
+			        android:gravity="center"
+			        android:layout_gravity="center_horizontal"
+		    		android:layout_marginTop="10dip"
+		            android:textSize="45sp"
+		            android:text="古诗标题"
+		            android:textColor="@android:color/black">
+		        </TextView>
+		        <TextView 
+		            android:id="@+id/author" 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"  
+		            android:layout_marginTop="10dip"
+			        android:gravity="center"
+			        android:layout_gravity="center_horizontal"
+		            android:textSize="25sp"
+		            android:text="古诗作者曹植"
+		            android:textColor="@android:color/black">
+		        </TextView>
+		        <TextView 
+		            android:id="@+id/content" 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"  
+		            android:layout_marginTop="10dip"
+			        android:gravity="left"
+			        android:layout_gravity="center_horizontal"
+		            android:textSize="30sp"
+		            android:text="古诗作者曹植\n古诗作者曹植\n古诗作者曹植\n古诗作者曹植\n古诗作者曹植\n古诗作者曹植\n"
+		            android:textColor="@android:color/black">
+		        </TextView>
+	        </LinearLayout>
+	    </ScrollView> 
+	     <com.kingPadStudy.views.PoemTeachFlashView
+	           android:id="@+id/flash"
+	           android:layout_width="fill_parent"
+	           android:layout_height="150dip"
+		       android:layout_above="@id/sv" >
+		 </com.kingPadStudy.views.PoemTeachFlashView>
+		 <LinearLayout 
+	            android:id="@+id/linear_progress"
+			    android:layout_above="@id/flash"
+		        android:layout_width="400dip"
+		        android:layout_height="50dip"
+		        android:layout_gravity="center_horizontal"
+		        android:visibility="gone"  
+	           	android:layout_marginBottom="145dip" 
+		        	android:layout_marginLeft="365dip"   
+		       	android:layout_alignParentBottom="true"
+		        android:orientation="horizontal">
+			        <ProgressBar 
+			            android:id="@+id/progress_horizontal"
+				        style="?android:attr/progressBarStyleHorizontal"
+				        android:layout_width="200dip"
+				        android:layout_height="20dip"
+				        android:max="100"
+				        android:progress="100"
+				        android:gravity="center"
+				        android:secondaryProgress="100" />
+			        <TextView
+			            android:id="@+id/text_time"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content" 
+				        android:layout_marginLeft="10dip"
+				        android:layout_marginBottom="25dip"
+				        android:textSize="22sp"
+				        android:textColor="@android:color/black"
+			            ></TextView>
+		        </LinearLayout>
+		
+	     	     
+		 <LinearLayout 
+	           android:id="@+id/linear_button_record"
+	           android:layout_width="fill_parent"
+	           android:layout_height="wrap_content"
+	           android:gravity="left"
+	           android:layout_marginBottom="57dip"
+			   android:layout_gravity="center_horizontal"
+		       android:layout_alignParentBottom="true" >
+				<ImageButton
+		        	android:id="@+id/button_record"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" 
+		        	android:layout_marginLeft="400dip"   
+			        android:background="@drawable/button_record1">
+		        </ImageButton>
+				<ImageButton
+		        	android:id="@+id/button_play_record"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" 
+		        	android:layout_marginLeft="10dip"   
+			        android:background="@drawable/button_play_record3">
+		        </ImageButton> 
+		         <ImageButton
+		        	android:id="@+id/button_switch_guankan"
+			        android:layout_width="50dip"
+			        android:layout_height="75dip"
+		        	android:layout_marginLeft="120dip" 
+		        	android:layout_marginBottom="22dip" 
+			        android:background="@drawable/guankan2">
+		        </ImageButton>
+		        <ImageButton
+		        	android:id="@+id/button_switch_langdu"
+			        android:layout_width="50dip"
+			        android:layout_height="75dip"
+		        	android:layout_marginLeft="20dip" 
+		        	android:layout_marginBottom="22dip" 
+			        android:background="@drawable/langdu1">
+		        </ImageButton>
+		 </LinearLayout>
+    </RelativeLayout>
+    <!-- 返回按钮-->
+    <com.views.GameView
+        android:id="@+id/flash_button_return"
+        android:layout_width="80dip"
+        android:layout_height="60dip" 
+        android:layout_marginTop="10dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/back_default" /> 
+   <ProgressBar
+      android:id="@+id/flash_play_progress_7491"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="10dip"
+      android:layout_marginRight="10dip"
+      android:layout_marginTop="10dip"
+      android:indeterminate="false"
+      android:max="500"
+      android:progressDrawable="@drawable/seekbar_style" /> 
+   <ImageButton
+     android:id="@+id/flash_button_stop_7494"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginRight="20dip" 
+     android:background="#00000000"
+     android:src="@drawable/stop" />
+</RelativeLayout>

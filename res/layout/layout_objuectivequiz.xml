@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kingPadStudy.views.ObjectiveQuizView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg_object_big"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical" >
+    <!-- 字词辨析 -->
+    <RelativeLayout
+        android:id="@+id/bg_object_small"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center">
+  
+   <!-- <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="68dip"
+        android:layout_height="68dip" 
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/logo" /> -->
+        <!-- 左下角的记分栏 -->
+        <include
+            android:layout_width="200dp"
+            android:layout_height="300dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            layout="@layout/record_grades_layout" />
+            
+        <!-- 右上角的返回键 -->
+        <com.views.GameView
+            android:id="@+id/button_back"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip" />
+        <!-- 右上角的返回键 -->
+            
+        <!-- 中间部分主体操作区域 -->
+
+        <RelativeLayout
+        	android:id="@+id/layout_main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="120dip"
+            android:layout_marginLeft="180dip"
+            android:layout_marginRight="160dip"
+            android:layout_marginTop="140dip" >
+            
+            <!-- 引导 -->
+            <TextView
+                android:id="@+id/intro_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="10dip"
+                android:textColor="#990000"
+                android:textSize="25sp" />
+ 
+            
+            <ScrollView
+                android:id="@+id/sv"
+                android:layout_width="700dip"
+                android:layout_height="400dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/intro_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dip" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <!-- 学习显示的主要提示内容(qeustion)，里面根据数据动态增加TextView,TextView大小颜色可以动态设置 -->
+
+                    <LinearLayout
+                        android:id="@+id/question_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dip"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+
+                    <!-- 答案选择区域  根据数据动态增加TextView -->
+
+                    <LinearLayout
+                        android:id="@+id/option_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dip"
+                        android:gravity="left"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                    <!-- 答案解析，分两部分 -->
+
+                    <LinearLayout
+                        android:id="@+id/answer_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dip"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- 对，错的图片 -->
+
+            <ImageView
+                android:id="@+id/image_judge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="130dip"
+                android:src="@drawable/check_right"
+                android:visibility="invisible" >
+            </ImageView>
+
+
+            <!-- 三个标记了解程度的小人 -->
+
+            <LinearLayout
+                android:id="@+id/check_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dip"
+                android:orientation="horizontal"
+                android:visibility="invisible" >
+
+                <com.views.GameView
+                    android:id="@+id/check_bad"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginRight="20dip" />
+
+                <com.views.GameView
+                    android:id="@+id/check_just"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginRight="20dip" />
+
+                <com.views.GameView
+                    android:id="@+id/check_good"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip" />
+            </LinearLayout>
+
+            <com.views.GameView
+                android:id="@+id/light"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dip"
+                android:src="@drawable/light_green2"
+                android:visibility="invisible" />
+
+            <!-- 上下题的按钮 -->
+
+            <LinearLayout
+                android:id="@+id/jump_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dip"
+                android:orientation="horizontal"
+                android:visibility="invisible" >
+
+                <com.views.GameView
+                    android:id="@+id/button_last"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginRight="20dip" />
+
+                <com.views.GameView
+                    android:id="@+id/button_next"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginLeft="20dip" />
+            </LinearLayout>
+        </RelativeLayout>
+        
+        <ImageButton
+            android:id="@+id/button_laba"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="220dip"
+            android:layout_marginTop="210dip"
+            android:background="@drawable/horn"
+            android:visibility="invisible" />
+        <RelativeLayout
+        	android:id="@+id/hint_layout"
+            android:layout_width="350dip"
+            android:layout_height="500dip" 
+            android:layout_marginLeft="340dip" 
+        	android:background="@drawable/frame_hint"
+        	android:gravity="bottom|center"
+        	android:layout_gravity="center"
+        	android:visibility="invisible" >
+        	<TextView
+        		android:id="@+id/text_hint"
+	            android:layout_width="250dip"
+	            android:layout_height="66dip"
+	            android:textSize="18sp"
+	            android:textColor="#000000"
+               	android:layout_marginLeft="12dip"  
+               	android:gravity="left"
+               	android:layout_alignParentBottom="true"  
+               	android:layout_marginBottom="107dip">
+        	</TextView>
+        	<ImageView
+        		android:id="@+id/button_yes"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+               	android:layout_alignParentBottom="true"  
+               	android:layout_marginBottom="11dip"
+               	android:layout_marginLeft="96dip"
+               	android:layout_gravity="center"
+               	android:src="@drawable/sure">
+        	</ImageView>
+        </RelativeLayout>
+    </RelativeLayout>
+</com.kingPadStudy.views.ObjectiveQuizView>

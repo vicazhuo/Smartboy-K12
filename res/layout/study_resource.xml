@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<LinearLayout 
+    android:layout_width="700dp"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
+    
+    <LinearLayout 
+        android:id="@+id/linearlayout_chinese"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true">
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp">
+            <ImageView 
+                android:id="@+id/imageview_chinese"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/tree_close"/>
+            
+            <TextView 
+                android:id="@+id/textview_chinese"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="4dp"
+	            android:text="语文"
+	            android:textColor="@android:color/primary_text_light"
+	            android:textSize="25dp"/>
+        </LinearLayout>
+        
+        
+        <com.views.ExpandListView
+            android:id="@+id/expandlistview_chinese"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:visibility="visible">
+            
+        </com.views.ExpandListView>
+            
+    </LinearLayout>
+ 
+    <LinearLayout 
+        android:id="@+id/linearlayout_math"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+       <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp">
+            
+            <ImageView 
+                android:id="@+id/imageview_math"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/tree_close"/>
+            
+            <TextView 
+                android:id="@+id/textview_math"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="4dp"
+	            android:text="数学"
+	            android:textColor="@android:color/primary_text_light"
+	            android:textSize="25dp"/>
+        </LinearLayout>
+        
+        <com.views.ExpandListView
+            android:id="@+id/expandlistview_math"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:visibility="visible">
+            
+        </com.views.ExpandListView>
+            
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/linearlayout_english"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp">
+            
+            <ImageView 
+                android:id="@+id/imageview_english"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/tree_close"/>
+            
+            <TextView 
+                android:id="@+id/textview_english"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="4dp"
+	            android:text="英语"
+	            android:textColor="@android:color/primary_text_light"
+	            android:textSize="25dp"/>
+        </LinearLayout>
+        
+        <com.views.ExpandListView
+            android:id="@+id/expandlistview_english"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:visibility="visible">
+        </com.views.ExpandListView>
+            
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

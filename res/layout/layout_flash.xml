@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kingPadStudy.views.FlashView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/layout_background" > 
+    <RelativeLayout
+        android:id="@+id/layout_frame"
+        android:layout_width="1024dip"
+        android:layout_height="768dip"
+        android:layout_centerVertical="true" > 
+   
+   <!-- <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="68dip"
+        android:layout_height="68dip" 
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/logo" /> -->
+        <RelativeLayout 
+            android:layout_width="1024dip"
+            android:layout_height="768dip"
+		    android:layout_alignParentRight="false"   >
+		    <com.kingPadStudy.views.MyWebView
+            	android:id="@+id/webview"
+		        android:layout_width="700dp"
+		        android:layout_height="500dp"
+		        android:layout_marginTop="200dip" 
+		        android:layout_marginLeft="250dip"  
+        		android:background="@android:color/transparent"   >
+		    </com.kingPadStudy.views.MyWebView>
+            <LinearLayout
+		        android:id="@+id/layout_controll"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" 
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginBottom="100dip"
+		        android:background="#00000000"
+		        android:gravity="center"
+		        android:orientation="horizontal"
+		        android:visibility="invisible" >
+		        <ImageButton
+		            android:id="@+id/button_stop"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+	                android:layout_marginLeft="-20dip"
+	                android:layout_marginRight="20dip"
+		            android:layout_marginTop="15dip"
+		            android:background="#00000000"
+		            android:src="@drawable/stop" />
+		        <ImageButton
+		            android:id="@+id/button_play"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+		            android:layout_marginRight="20dip"
+		            android:layout_marginTop="15dip"
+		            android:background="#00000000"
+		            android:src="@drawable/play" />
+		        <ProgressBar
+		            android:id="@+id/progress"
+		            style="?android:attr/progressBarStyleHorizontal"
+		            android:layout_width="150dip"
+		            android:layout_height="10dip"
+		            android:layout_marginRight="10dip"
+		            android:layout_marginTop="15dip"
+		            android:indeterminate="false"
+		            android:max="500"
+		            android:progressDrawable="@drawable/seekbar_style" /> 
+		    </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/book_front"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="298dip" 
+        android:layout_marginRight="25dip"  
+    	android:layout_alignParentRight="true" 
+    	android:layout_alignParentTop="true" 
+        android:src="@drawable/book_front"
+        android:visibility="gone">
+    </ImageView>
+    <com.views.GameView
+        android:id="@+id/button_return"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip" />
+</com.kingPadStudy.views.FlashView>

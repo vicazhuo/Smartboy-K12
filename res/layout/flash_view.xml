@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1024dip"
+    android:layout_height="768dip" >
+    <com.kingPadStudy.views.MyWebView
+        android:id="@+id/flash_web_view_7488"
+        android:layout_width="1024dip"
+        android:layout_height="768dip"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+          />
+</RelativeLayout>

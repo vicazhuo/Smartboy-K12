@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FlashPlayer</title> 
+<script type="text/javascript">
+	var total;		 	//定义flash影片总桢数
+	var frame_number;	//定义flash影片当前桢数
+	/* var rate = 12;		//帧频 */
+
+	//动态显示播放影片的当前桢/总桢数(进度条显示)
+	function showcount(){
+		total = movie.TotalFrames();
+		frame_number = movie.CurrentFrame();
+		frame_number++;
+		var progressSize = 500*(frame_number/total);
+		CallJava.consoleFlashProgress(progressSize);
+	}
+	
+	//播放影片 
+	function Play(){
+		/* var nPercentLoaded = Math.abs(movie.PercentLoaded());
+		alert('play function loaded:' + nPercentLoaded); */
+			
+		movie.Play();
+		showcount();
+	}
+
+	/* //判断flash文件资源是否加载完毕
+	function hasLoadAll(){
+		var nPercentLoaded = Math.abs(movie.PercentLoaded());
+		alert('loaded:' + nPercentLoaded);
+		
+		if(nPercentLoaded == 100)  {
+			alert('loaded all...');
+			return true;
+		}
+		return false;
+	} */
+
+	//暂停播放
+	function Pause() {
+		movie.StopPlay();
+	}
+
+	//开始载入flash影片
+	function loadSWF(fsrc, fwidth, fheight) {
+		movie.LoadMovie(0, fsrc);
+		/* fscommand("fullscreen", "true"); */
+		movie.width = Math.abs(fwidth);
+		movie.height = Math.abs(fheight);
+		frame_number = movie.CurrentFrame();
+	}
+
+	/* //快进或者快退
+	function GoToFrame(progress){
+		alert('call GoToFrame progress=:' + progress);
+		total = movie.TotalFrames();
+		if(movie.IsPlaying())
+			Pause();
+		
+		frame_number = total * progress / 500;
+		
+		alert('call GoToFrame frame_number=:' + frame_number);
+		movie.GotoFrame(80);
+		alert('playing...');
+		Play();
+	} */
+
+	//flash插件不存在
+	function error() {
+		document.body.style.backgroundImage = "url(flash_view_back_7490.jpg)";
+		document.getElementById("flash_page").innerHTML = "<div style='color:#F00;" +
+				" font-size:20px; text-align:center; margin-top:50px; margin-left:50px;'>"
+				+ "缺少支持flash播放的插件，请安装后再试！</div>";
+		/* CallJava.goToMarket(); */
+	} 
+	//设置flash的高
+	function setHeight(height) {
+		movie.height = height;
+		document.getElementById("flash_page").style.height = height;
+	}
+</script>
+<script type="text/javascript">
+	var lockState = 0;
+	function lock(event)
+	{
+		if(lockState == 0){
+			lockState = 1;
+		}else{
+			event.preventDefault();
+		}
+	}  
+</script>
+<style type="text/css"> 
+	body {
+		margin:0;
+		padding:0;
+	}
+</style>
+
+</head>
+	<body> 
+		<div  id="flash_page"  style="margin:0; padding:0;"    >
+			<object type="application/x-shockwave-flash" 
+	                        id="movie"  
+	                        onmouseup="lock(event)"
+	                        data="" 
+	                        Wmode="transparent" 
+	                        height="" 
+	                        width="">	
+	                                <param name="movie" value="" /> 
+	                                <param name="quality" value="medium">
+	                                <param name="Wmode" value="transparent" />  
+	                                <param name="loop" value="false" /> 
+	                                <param name="allowScriptAccess" value="always" /> 
+	                                <param name="menu" value="false" /> 
+	                                <param name="scale" value="" /> 
+	                                <param name="allowFullScreen" value="false" /> 
+	       </object> 
+		</div>
+	</body> 
+</html>
+ 

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/top" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="请输入您的注册口令"
+            android:textColor="@android:color/white"
+            android:textSize="25dip" />
+    </RelativeLayout>
+
+    <TableLayout
+       android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:shrinkColumns="10"
+        android:stretchColumns="0"
+        android:gravity="center" 
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="220dp">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/userpawd_selector" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/web_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginTop="14dip"
+                    android:text="口令:"
+                    android:textColor="#5A5A5A"
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/edittext_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="14dip"
+                    android:layout_toRightOf="@id/web_text"
+                    android:paddingBottom="10dip"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:textColor="#5A5A5A"
+                    android:textSize="24dp" />
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+
+    <RelativeLayout
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip" >
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="120dip"
+            android:layout_height="60dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dip"
+            android:background="@drawable/button1"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/button_quit"
+            android:layout_width="120dip"
+            android:layout_height="60dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/button2"
+            android:gravity="center"
+            android:text="退出"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+</LinearLayout>

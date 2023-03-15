@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+   
+    <!-- 选择教材xml布局文件 -->
+
+
+	<TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="30dip"
+		android:layout_marginRight="30dip"
+		android:layout_marginTop="30dip"
+		android:background="@android:color/transparent"
+		android:shrinkColumns="0"
+		android:stretchColumns="0" >
+	    <TableRow
+           android:layout_width="fill_parent"
+           android:layout_height="60dip"
+           android:background="@android:color/darker_gray" >
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="20dip"
+               android:text="请选择你所使用的年级:"
+               android:textColor="@android:color/white"
+               android:textSize="25dip" />
+         </TableRow>
+	     <TableRow
+             android:layout_width="fill_parent"
+             android:layout_height="60dip"
+             android:background="@drawable/bottom_selector" >
+
+		    <RelativeLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="40dp"
+	            android:layout_marginTop="20dp">
+	            
+	           	<TextView 
+	           	    android:id="@+id/grade"
+	           	    android:layout_width="wrap_content"
+	           	    android:layout_height="wrap_content"
+	           	    android:layout_marginTop="4dp"
+	           	    android:textSize="24dp"
+	           	    android:textColor="@android:color/black"
+	           	    android:text="年级:"
+	           	    android:gravity="center"/>
+	           	
+	           <Spinner 
+			         android:id="@+id/spinner_grade"
+			         android:layout_width="200dp"
+			         android:layout_height="wrap_content"
+			         android:layout_toRightOf="@id/grade"
+			         android:layout_marginTop="4dp"
+			         android:layout_marginLeft="40dp"
+			         android:layout_gravity="center_vertical"/>
+	        </RelativeLayout>
+         </TableRow>
+	    
+	 </TableLayout>
+	 
+	 <TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="30dip"
+		android:layout_marginRight="30dip"
+		android:layout_marginTop="30dip"
+		android:background="@android:color/transparent"
+		android:shrinkColumns="0"
+		android:stretchColumns="0" >
+    	
+    	<!-- 选择教程 -->
+     	<TableRow
+          android:layout_width="fill_parent"
+          android:layout_height="60dip"
+          android:background="@android:color/darker_gray" >
+          <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="20dip"
+               android:text="请选择你所使用的教材版本:"
+               android:textColor="@android:color/white"
+               android:textSize="25dip" />
+        </TableRow>
+	     
+     	<!-- 语文 -->
+     	<TableRow
+          android:layout_width="fill_parent"
+          android:layout_height="80dip"
+          android:background="@drawable/middle_selector" >
+         <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp">
+            
+           	<TextView 
+           	    android:id="@+id/china"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="wrap_content"
+           	    android:layout_marginTop="4dp"
+           	    android:textSize="24dp"
+           	    android:textColor="@android:color/black"
+           	    android:text="语文:"
+           	    android:gravity="center"/>
+           	
+           	<Spinner 
+           	    android:id="@+id/spinner_course_book_china"
+           	    android:layout_width="200dp"
+           	    android:layout_height="wrap_content"
+           	    android:layout_toRightOf="@id/china"
+           	    android:layout_marginLeft="40dp"
+           	    android:layout_marginTop="3dp"
+           	    android:gravity="center"/>
+        </RelativeLayout>
+        </TableRow>
+     	<!-- 数学 -->
+     	<TableRow
+          android:layout_width="fill_parent"
+          android:layout_height="80dip"
+          android:background="@drawable/middle_selector" >
+         <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp">
+            
+           	<TextView 
+           	    android:id="@+id/math"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="wrap_content"
+           	    android:layout_marginTop="4dp"
+           	    android:textSize="24dp"
+           	    android:textColor="@android:color/black"
+           	    android:text="数学:"
+           	    android:gravity="center"/>
+           	
+           	<Spinner 
+           	    android:id="@+id/spinner_course_book_math"
+           	    android:layout_width="200dp"
+           	    android:layout_height="wrap_content"
+           	    android:layout_toRightOf="@id/math"
+           	    android:layout_marginLeft="40dp"
+           	    android:layout_marginTop="3dp"/>
+        </RelativeLayout>
+        </TableRow>
+        
+     	
+     	<!-- 英语 -->
+     	<TableRow
+          android:layout_width="fill_parent"
+          android:layout_height="80dip"
+          android:background="@drawable/bottom_selector" >
+          <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp">
+            
+           	<TextView 
+           	    android:id="@+id/english"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="wrap_content"
+           	    android:textSize="24dp"
+           	    android:layout_marginTop="4dp"
+           	    android:textColor="@android:color/black"
+           	    android:text="英语:"
+           	    android:gravity="center"/>
+           	
+           	<Spinner 
+           	    android:id="@+id/spinner_course_book_english"
+           	    android:layout_width="200dp"
+           	    android:layout_height="wrap_content"
+           	    android:layout_toRightOf="@id/english"
+           	    android:layout_marginLeft="40dp"
+           	    android:layout_marginTop="3dp"/>
+        </RelativeLayout>
+        </TableRow>
+	</TableLayout>
+        
+       <RelativeLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:layout_marginTop="50dp">
+           
+           <Button 
+               android:id="@+id/button_submit"
+               android:layout_width="120dp"
+               android:layout_height="60dp"
+               android:textSize="24dp"
+               android:gravity="center"
+               android:background="@drawable/button1"
+               android:text="提交"/>
+           
+           <Button 
+               android:id="@+id/button_cannel"
+               android:layout_width="120dp"
+               android:layout_height="60dp"
+               android:layout_toRightOf="@id/button_submit"
+               android:layout_marginLeft="80dp"
+               android:textSize="24dp"
+               android:gravity="center"
+               android:background="@drawable/button1"
+               android:text="取消"/>
+       </RelativeLayout>
+	
+</LinearLayout>

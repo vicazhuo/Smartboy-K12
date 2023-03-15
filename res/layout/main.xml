@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bg">
+    <!-- 启动首页界面 -->
+     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:background="@drawable/top" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="资源中心"
+            android:textColor="@android:color/white"
+            android:textSize="30dip" />
+      
+        <TextView 
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#ff0000"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"/>
+        
+        
+        <Button
+            android:id="@+id/button_quit"
+            android:layout_width="100dip"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/button2"
+            android:gravity="center"
+            android:text="退   出"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+        <Button
+            android:id="@+id/button_refresh"
+            android:layout_width="100dip"
+            android:layout_height="50dip" 
+            android:background="@drawable/button1"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="刷   新"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="25dip" />
+    </RelativeLayout>
+      
+    
+    <!-- 左侧目录 -->
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    
+	    <LinearLayout 
+	        android:layout_width="300dp"
+	        android:layout_height="fill_parent"
+	        android:id="@+id/catgory"
+	        android:orientation="vertical">"
+	        
+	    	<ListView 
+	    	    android:id="@+id/listview_catalog"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:divider="@android:color/darker_gray"
+	    	    android:dividerHeight="1dp"/>   
+	    	    
+	    	<View
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="1dp"
+	    	    android:background="@android:color/darker_gray"/>
+	        
+	    </LinearLayout>
+	    
+	    <View 
+	        android:id="@+id/view_separtor"
+	        android:layout_width="2dp"
+	        android:layout_height="fill_parent"
+	        android:layout_toRightOf="@id/catgory"
+	        android:background="@android:color/background_dark"
+	        />
+	    
+	    <!-- 右侧内容 -->
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:id="@+id/container"
+	        android:layout_toRightOf="@id/view_separtor">
+	    </LinearLayout>
+
+    </RelativeLayout>
+    
+</LinearLayout>

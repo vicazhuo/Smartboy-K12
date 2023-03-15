@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kingPadStudy.views.ShiZiRememberView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/bg_object_big"> 
+    <RelativeLayout
+        android:id="@+id/bg_object_small"
+        android:layout_width="1024dip"
+        android:layout_height="768dip"
+        android:layout_centerVertical="true">  
+   		
+   <!-- <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="68dip"
+        android:layout_height="68dip" 
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/logo" /> -->
+        <!-- 左下角的记分栏 -->
+        <include
+            android:layout_width="200dp"
+            android:layout_height="300dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            layout="@layout/record_grades_layout" />
+        <!-- 右上角的返回键 -->
+        <com.views.GameView
+            android:id="@+id/button_back"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip" />
+        <!-- 右上角的返回键 --> 
+		 
+		 
+        <!-- 中间部分主体操作区域 -->
+        <RelativeLayout
+        	android:id="@+id/layout_main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="120dip"
+            android:layout_marginLeft="180dip"
+            android:layout_marginRight="160dip"
+            android:layout_marginTop="140dip" >
+            
+		 <com.views.GameView
+            android:id="@+id/button_hedui"
+            android:layout_width="200dp"
+            android:layout_height="92dp"
+            android:background="@drawable/laba"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="220dip"
+            android:layout_marginTop="350dip" 
+            android:visibility="invisible"  >
+		 </com.views.GameView>
+		 
+		<!-- 引导字 -->
+		<TextView
+            android:id="@+id/intro_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="100dip"
+            android:layout_marginTop="30dip"  
+            android:textColor="#990000"
+            android:textSize="25sp" >
+		</TextView> 	
+		
+		<!-- 大字 -->
+		<TextView
+            android:id="@+id/text_dazi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dip"
+            android:layout_marginTop="130dip"
+            android:textSize="162sp"
+            android:textColor="@android:color/black"
+            android:text="永"
+            android:visibility="invisible">
+		</TextView> 	
+		
+		<!-- 图片 -->
+		<ImageView
+            android:id="@+id/image_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="340dip"
+            android:layout_marginTop="157dip"
+            android:visibility="invisible">
+		</ImageView>  
+		
+		
+            <!-- 三个标记了解程度的小人 -->
+            <LinearLayout
+                android:id="@+id/check_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"  
+                android:orientation="horizontal"
+            	android:visibility="invisible" >
+                <com.views.GameView
+                    android:id="@+id/check_bad"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+			        android:background="@drawable/button_bad"
+                    android:layout_marginRight="20dip" />
+                <com.views.GameView
+                    android:id="@+id/check_just"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+			        android:background="@drawable/button_just"
+                    android:layout_marginRight="20dip" />
+                <com.views.GameView
+                    android:id="@+id/check_good"
+                    android:layout_width="60dip"
+			        android:background="@drawable/face_good"
+                    android:layout_height="60dip" />
+            </LinearLayout>
+            
+            <!-- 灯 -->
+            <com.views.GameView
+                android:id="@+id/light"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true" 
+                android:layout_marginLeft="20dip" 
+            	android:visibility="invisible" />
+            <!-- 上下题的按钮 -->
+            <LinearLayout
+                android:id="@+id/jump_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"  
+                android:orientation="horizontal"
+            	android:visibility="invisible"  >
+                <com.views.GameView
+                    android:id="@+id/button_last"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+			        android:background="@drawable/button_previous"
+                    android:layout_marginRight="20dip" />
+                <com.views.GameView
+                    android:id="@+id/button_next"
+                    android:layout_width="60dip"
+			        android:background="@drawable/button_next"
+                    android:layout_height="60dip" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 主体部分结束 -->
+            
+            
+            
+        <ImageButton
+            android:id="@+id/button_laba"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="220dip"
+            android:layout_marginTop="210dip"
+            android:background="@drawable/horn"
+            android:visibility="invisible" /> 
+            
+        <RelativeLayout
+        	android:id="@+id/hint_layout"
+            android:layout_width="350dip"
+            android:layout_height="500dip" 
+            android:layout_marginLeft="340dip" 
+        	android:background="@drawable/frame_hint"
+        	android:gravity="bottom|center"
+        	android:layout_gravity="center"
+        	android:visibility="invisible" >
+        	
+        	<TextView
+        		android:id="@+id/text_hint"
+	            android:layout_width="254dip"
+	            android:layout_height="66dip"
+	            android:textSize="18sp"
+	            android:textColor="#000000"
+               	android:layout_marginLeft="12dip"  
+               	android:gravity="left"
+               	android:layout_alignParentBottom="true"  
+               	android:layout_marginBottom="107dip">
+        	</TextView> 
+        	<ImageView
+        		android:id="@+id/button_yes"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+               	android:layout_alignParentBottom="true"  
+               	android:layout_marginBottom="7dip"
+               	android:layout_marginLeft="104dip"
+               	android:layout_gravity="center"
+               	android:src="@drawable/hint_yes">
+        	</ImageView>
+        </RelativeLayout>
+            
+    </RelativeLayout>
+    
+</com.kingPadStudy.views.ShiZiRememberView>
